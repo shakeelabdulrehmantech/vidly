@@ -13,36 +13,42 @@ class Movies extends Component {
   };
 
   render() {
+    const { length: count } = this.state.movies;
+    if (count === 0) return <p>No record(s) found.</p>;
+
     return (
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Genre</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Rate</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.state.movies.map((m, index) => (
-            <tr key={index}>
-              <th scope="row">{m.title}</th>
-              <td>{m.genre.name}</td>
-              <td>{m.numberInStock}</td>
-              <td>{m.dailyRentalRate}</td>
-              <td>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => this.handleDelete(m)}
-                >
-                  Delete
-                </button>
-              </td>
+      <React.Fragment>
+        <p>{count} record(s) found.</p>
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Genre</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Rate</th>
+              <th scope="col"></th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {this.state.movies.map((m, index) => (
+              <tr key={index}>
+                <th scope="row">{m.title}</th>
+                <td>{m.genre.name}</td>
+                <td>{m.numberInStock}</td>
+                <td>{m.dailyRentalRate}</td>
+                <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => this.handleDelete(m)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </React.Fragment>
     );
   }
 }
