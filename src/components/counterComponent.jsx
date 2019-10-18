@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  state = {
-    value: this.props.value
-  };
+  //Make it controlled component
+  //state = {
+  //  value: this.props.value
+  //};
 
   styles = {
     fontSize: 15,
@@ -18,14 +19,14 @@ class Counter extends Component {
           {this.formatCount()}
         </span>
         <button
-          onClick={this.handleIncrements}
+          onClick={() => this.props.onIncrement(this.props.counter)}
           className="btn btn-primary btn-sm"
         >
           Increment
         </button>
 
         <button
-          onClick={this.handleDecrements}
+          onClick={this.props.onDecrements}
           className="btn btn-primary btn-sm m-2"
         >
           Decrement
@@ -43,32 +44,39 @@ class Counter extends Component {
   }
 
   formatCount() {
-    const { value } = this.state;
+    //const { value } = this.state;
+    const { value } = this.props.counter;
     return value === 0 ? "Zero" : value;
   }
 
   getBadgeClasses() {
+    //let classes = "badge m-2 badge-";
+    //if (this.state.value < 0) {
+    //  classes += "danger";
+    //} else {
+    //  classes += this.state.value === 0 ? "warning" : "primary";
+    //}
+
     let classes = "badge m-2 badge-";
-    if (this.state.value < 0) {
+    if (this.props.counter.value < 0) {
       classes += "danger";
     } else {
-      classes += this.state.value === 0 ? "warning" : "primary";
+      classes += this.props.counter.value === 0 ? "warning" : "primary";
     }
-
     return classes;
   }
 
-  handleIncrements = () => {
-    //cannot assign/update value to props because it is read only property
-    ////this.props.value = 0;
-    console.log("Increment Clicked", this);
-    this.setState({ value: this.state.value + 1 });
-  };
+  //handleIncrements = () => {
+  //cannot assign/update value to props because it is read only property
+  ////this.props.value = 0;
+  //console.log("Increment Clicked", this);
+  //this.setState({ value: this.state.value + 1 });
+  //};
 
-  handleDecrements = () => {
-    console.log("Decrement Clicked", this);
-    this.setState({ value: this.state.value - 1 });
-  };
+  //handleDecrements = () => {
+  //  console.log("Decrement Clicked", this);
+  //  this.setState({ value: this.state.value - 1 });
+  //};
 }
 
 export default Counter;

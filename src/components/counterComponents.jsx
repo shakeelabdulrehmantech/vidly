@@ -12,6 +12,15 @@ class Counters extends Component {
     ]
   };
 
+  handleIncrement = counter => {
+    const cloneCounters = [...this.state.counters];
+    const index = cloneCounters.indexOf(counter);
+    //cloneCounters[index] = { ...counter };
+    cloneCounters[index].value++;
+    console.log(this.state.counters[index].value);
+    //this.setState({ counters: cloneCounters });
+  };
+
   handleDelete = counterId => {
     const filteredCounters = this.state.counters.filter(
       c => c.id !== counterId
@@ -29,7 +38,9 @@ class Counters extends Component {
             value={counter.value}
             selected={true}
             onDelete={this.handleDelete}
+            onIncrement={this.handleIncrement}
             id={counter.id}
+            counter={counter}
           >
             <h2>Heading 2...</h2>
           </Counter>
