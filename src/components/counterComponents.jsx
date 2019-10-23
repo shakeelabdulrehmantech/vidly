@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Counter from "./counterComponent";
 
 class Counters extends Component {
-  state = {
+  //Lifting state and methods up
+  /*state = {
     counters: [
       { id: 1, value: 4 },
       { id: 2, value: 1 },
@@ -11,6 +12,7 @@ class Counters extends Component {
       { id: 5, value: 0 }
     ]
   };
+  
 
   handleIncrement = counter => {
     const cloneCounters = [...this.state.counters];
@@ -28,17 +30,18 @@ class Counters extends Component {
     this.setState({ counters: filteredCounters });
     console.log("Delete Event Handler Called.", counterId);
   };
+*/
 
   render() {
     return (
       <div>
-        {this.state.counters.map(counter => (
+        {this.props.counters.map(counter => (
           <Counter
             key={counter.id}
             value={counter.value}
             selected={true}
-            onDelete={this.handleDelete}
-            onIncrement={this.handleIncrement}
+            onDelete={this.props.handleDelete}
+            onIncrement={this.props.handleIncrement}
             id={counter.id}
             counter={counter}
           >
