@@ -40,8 +40,9 @@ class Counters extends Component {
             key={counter.id}
             value={counter.value}
             selected={true}
-            onDelete={this.props.handleDelete}
-            onIncrement={this.props.handleIncrement}
+            onDelete={this.props.onDelete}
+            onIncrement={this.props.onIncrement}
+            onDecrement={this.props.onDecrement}
             id={counter.id}
             counter={counter}
           >
