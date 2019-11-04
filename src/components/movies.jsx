@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
+import Alert from "react-bootstrap/Alert";
 
 class Movies extends Component {
   state = {
@@ -14,7 +15,7 @@ class Movies extends Component {
 
   render() {
     const { length: count } = this.state.movies;
-    if (count === 0) return <p>No record(s) found.</p>;
+    if (count === 0) return <Alert variant="danger">No record(s) found.</Alert>;
 
     return (
       <React.Fragment>
@@ -36,7 +37,7 @@ class Movies extends Component {
                 <td>{m.genre.name}</td>
                 <td>{m.numberInStock}</td>
                 <td>{m.dailyRentalRate}</td>
-                <td>
+                <td style={{ float: "Right" }}>
                   <button
                     className="btn btn-danger"
                     onClick={() => this.handleDelete(m)}

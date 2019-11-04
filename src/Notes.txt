@@ -1,0 +1,30 @@
+Steve Griffith
+https://www.youtube.com/watch?v=WnP_ssWDBWU&list=PLyuRouwmQCjn-qjhte3RqlpjkcdvYZykP&index=2
+
+-- Lesson 54
+Stateless Functional Component
+const NavBar = (props) => {
+  return ( <div>
+      <p>SFC</p>
+  </div> );
+}
+
+-- Lessson 55
+Object destructuring
+Destructuring Arguments
+{onDelete, counters} = this.props
+
+-- Lessson 56
+Lifecycle Hooks
+
+-- Lessson 57
+Mounting Phase
+
+-- Lessson 58
+Updating Phase
+
+-- Lessson 59
+Unmounting Phase
+
+-- Lessson 60
+Unmounting Phase
