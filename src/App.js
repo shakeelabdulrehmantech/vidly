@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Counters from "./components/counterComponents";
+//import Counters from "./components/counterComponents";
 import Movies from "./components/movies";
 import NavBar from "./components/navBar";
 
@@ -119,7 +119,7 @@ class App extends Component {
             <hr />
           </div>
         </main>
-        <footer class="container">
+        <footer className="container">
           <p>&copy; Company 2017-2019</p>
         </footer>
       </React.Fragment>

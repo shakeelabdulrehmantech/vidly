@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
 import Alert from "react-bootstrap/Alert";
+import Like from "./common/like";
 
 class Movies extends Component {
   state = {
@@ -13,13 +14,23 @@ class Movies extends Component {
     console.log(movie);
   };
 
+  handleLike = m => {
+    const clonedMovies = [...this.state.movies];
+    let index = clonedMovies.indexOf(m);
+    clonedMovies[index] = { ...clonedMovies[index] };
+    clonedMovies[index].liked = !clonedMovies[index].liked;
+    this.setState({ movies: clonedMovies });
+    console.log("Like Clicked!", m);
+  };
+
   render() {
     const { length: count } = this.state.movies;
     if (count === 0) return <Alert variant="danger">No record(s) found.</Alert>;
 
     return (
       <React.Fragment>
-        <p>{count} record(s) found.</p>
+        <Alert variant="success">{count} record(s) found.</Alert>
+
         <table className="table table-striped">
           <thead>
             <tr>
@@ -27,6 +38,7 @@ class Movies extends Component {
               <th scope="col">Genre</th>
               <th scope="col">Stock</th>
               <th scope="col">Rate</th>
+              <th scope="col">Like</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -37,6 +49,12 @@ class Movies extends Component {
                 <td>{m.genre.name}</td>
                 <td>{m.numberInStock}</td>
                 <td>{m.dailyRentalRate}</td>
+                <td>
+                  <Like
+                    liked={m.liked}
+                    onClick={() => this.handleLike(m)}
+                  ></Like>
+                </td>
                 <td style={{ float: "Right" }}>
                   <button
                     className="btn btn-danger"

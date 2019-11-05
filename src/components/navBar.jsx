@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 //Stateless Functional Component
 const NavBar = props => {
@@ -24,7 +24,7 @@ const NavBar = props => {
           <li className="nav-item active">
             <a className="nav-link" href="/">
               Counters
-              <span class="badge badge-primary">{props.totalCounters}</span>
+              <span className="badge badge-primary">{props.totalCounters}</span>
             </a>
           </li>
         </ul>

@@ -5,7 +5,8 @@ const movies = [
     genre: { __id: "11", name: "Action" },
     numberInStock: 6,
     dailyRentalRate: 2.5,
-    publishDate: "2018-01-03-T19:04:28:809Z"
+    publishDate: "2018-01-03-T19:04:28:809Z",
+    liked: true
   },
   {
     __id: "2",
