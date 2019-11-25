@@ -1,6 +1,9 @@
 Steve Griffith
 https://www.youtube.com/watch?v=WnP_ssWDBWU&list=PLyuRouwmQCjn-qjhte3RqlpjkcdvYZykP&index=2
 
+--REACT--
+https://www.robinwieruch.de/javascript-fundamentals-react-requirements#spread-operator-in-react
+
 -- Lesson 54
 Stateless Functional Component
 const NavBar = (props) => {
