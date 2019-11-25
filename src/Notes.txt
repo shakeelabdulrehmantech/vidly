@@ -29,4 +29,23 @@ Unmounting Phase
 -- Lessson 60
 Unmounting Phase
 
--- Lessson 63 -- Done
+-- Lesson 62
+Demo of Reusable React Component LIKE --- Interface of this component what inputs should it receive...what events should it araise, these inputs and events define the interface of this component.
+
+-- Lessson 63 
+Created complete like component and integrated into to other component.
+
+-- Lession 64
+Review 
+
+-- Lession 65
+Pagination, Filtering and Sorting.
+
+-- Lession 66
+Pagination component excercise
+
+-- Lession 67
+Pagination component 
+
+-- Lession 68
+Implement Pagination Component -- Added Lodash -- A modern javascript utility library which makes javascript easier by taking the hassle of working with Iterating Arrays, Objects, Strings

@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-
+//import React, { Component } from "react";
+import React from "react";
+/*
 class Like extends Component {
   render() {
     let classes = "fa fa-heart";
@@ -14,5 +15,23 @@ class Like extends Component {
     );
   }
 }
+
+export default Like;
+*/
+
+//Convert Class component to Stateless Funtional Component becasue it is controlled component
+
+const Like = props => {
+  let classes = "fa fa-heart";
+  if (!props.liked) classes += "-o";
+  return (
+    <i
+      onClick={() => props.onClick()}
+      className={classes}
+      aria-hidden="true"
+      style={{ cursor: "pointer" }}
+    ></i>
+  );
+};
 
 export default Like;

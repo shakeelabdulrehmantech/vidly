@@ -23,6 +23,22 @@ const movies = [
     numberInStock: 7,
     dailyRentalRate: 3.5,
     publishDate: "2018-01-03-T19:04:28:809Z"
+  },
+  {
+    __id: "4",
+    title: "Airplane",
+    genre: { __id: "41", name: "Comedy" },
+    numberInStock: 8,
+    dailyRentalRate: 3.5,
+    publishDate: "2018-01-03-T19:04:28:809Z"
+  },
+  {
+    __id: "5",
+    title: "Get Out",
+    genre: { __id: "51", name: "Thriller" },
+    numberInStock: 7,
+    dailyRentalRate: 1.5,
+    publishDate: "2018-01-03-T19:04:28:809Z"
   }
 ];
 // Named export

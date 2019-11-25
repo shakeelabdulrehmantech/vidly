@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
 import Alert from "react-bootstrap/Alert";
 import Like from "./common/like";
+import Pagination from "./common/pagination";
 
 class Movies extends Component {
   state = {
-    movies: getMovies()
+    movies: getMovies(),
+    pageSize: 4
   };
   //Watched Lesson: 39
   handleDelete = movie => {
@@ -21,6 +23,10 @@ class Movies extends Component {
     clonedMovies[index].liked = !clonedMovies[index].liked;
     this.setState({ movies: clonedMovies });
     console.log("Like Clicked!", m);
+  };
+
+  handlePageChange = page => {
+    console.log(page);
   };
 
   render() {
@@ -67,6 +73,11 @@ class Movies extends Component {
             ))}
           </tbody>
         </table>
+        <Pagination
+          itemsCount={this.state.movies.length}
+          pageSize={this.state.pageSize}
+          onPageChange={this.handlePageChange}
+        />
       </React.Fragment>
     );
   }
