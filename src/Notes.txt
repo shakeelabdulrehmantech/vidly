@@ -4,6 +4,11 @@ https://www.youtube.com/watch?v=WnP_ssWDBWU&list=PLyuRouwmQCjn-qjhte3RqlpjkcdvYZ
 --REACT--
 https://www.robinwieruch.de/javascript-fundamentals-react-requirements#spread-operator-in-react
 
+https://app.pluralsight.com/library/courses/react-redux-react-router-es6/table-of-contents
+
+It is only a component library which renders HTML for your browser
+The spread operator literally spreads all the key value pairs of an object
+
 -- Lesson 54
 Stateless Functional Component
 const NavBar = (props) => {
