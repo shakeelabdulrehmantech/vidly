@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-//import Counters from "./components/counterComponents";
-import Movies from "./components/movies";
+import Counters from "./components/counterComponents";
+//import Movies from "./components/movies";
 import NavBar from "./components/navBar";
 
 class App extends Component {
@@ -42,7 +42,6 @@ class App extends Component {
   };
 
   render() {
-    /*
     return (
       <React.Fragment>
         <NavBar />
@@ -67,7 +66,6 @@ class App extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                
                 <Counters
                   counters={this.state.counters}
                   onDelete={this.handleDelete}
@@ -80,14 +78,14 @@ class App extends Component {
             <hr />
           </div>
         </main>
-        <footer class="container">
+        <footer className="container">
           <p>&copy; Company 2017-2019</p>
         </footer>
       </React.Fragment>
     );
   }
-  */
 
+  /*
     return (
       <React.Fragment>
         <NavBar />
@@ -125,6 +123,7 @@ class App extends Component {
       </React.Fragment>
     );
   }
+  */
 }
 
 export default App;

@@ -9,6 +9,17 @@ https://app.pluralsight.com/library/courses/react-redux-react-router-es6/table-o
 It is only a component library which renders HTML for your browser
 The spread operator literally spreads all the key value pairs of an object
 
+
+React is just a library, so chances are, you are going to need a variety of other tools, libraries and patterns to build something real.
+
+Redux is one such library, Redux has eclipsed a -- flux Implementation
+React is most popular UI library, and Redux has become React's most popular state managment library, Along with React and Redux
+
+***Why Redux*** 
+One Store:
+Centralizes all of your appliction's state in a single store, unlike flux
+
+
 -- Lesson 54
 Stateless Functional Component
 const NavBar = (props) => {
